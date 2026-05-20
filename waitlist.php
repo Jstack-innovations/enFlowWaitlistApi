@@ -11,10 +11,10 @@ if (!$input) {
     exit;
 }
 
-$host = getenv("MYSQLHOST") ?: "127.0.0.1";
-$user = getenv("MYSQLUSER") ?: "root";
-$pass = getenv("MYSQLPASSWORD") ?: "root";
-$db   = getenv("MYSQLDATABASE") ?: "waitlist";
+$host = getenv("MYSQLHOST");
+$user = getenv("MYSQLUSER");
+$pass = getenv("MYSQLPASSWORD");
+$db   = getenv("MYSQLDATABASE");
 $port = getenv("MYSQLPORT") ? (int)getenv("MYSQLPORT") : 3306;
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
