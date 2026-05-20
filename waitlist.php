@@ -50,9 +50,6 @@ if ($stmt->execute()) {
     // ── TELEGRAM NOTIFICATION ──
    $botToken = getenv("TELEGRAM_BOT_TOKEN");
    $chatId   = getenv("TELEGRAM_CHAT_ID");
-        // ── TELEGRAM NOTIFICATION ──
-  // $botToken = "8929516825:AAGw1XNyT3U4H_RNHI21depIh4wrrYAQk00";
-//$chatId   = "1843218039";
 
 
     $message = "
@@ -85,10 +82,6 @@ $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
-// Log failures
-if ($httpCode !== 200) {
-    file_put_contents("/tmp/telegram_log.txt", date('Y-m-d H:i:s') . " | Code: $httpCode | Response: $response\n", FILE_APPEND);
-}
     // ── END TELEGRAM ──
 
     echo json_encode(["success" => true]);
