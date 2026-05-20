@@ -2,14 +2,15 @@
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-// ── DB config ── (update to match your credentials)
-$host = "127.0.0.1";
-$db   = "waitlist";
-$user = "root";
-$pass = "root";
+// ── DB config ──
+$host = getenv("MYSQLHOST");
+$db   = getenv("MYSQLDATABASE");
+$user = getenv("MYSQLUSER");
+$pass = getenv("MYSQLPASSWORD");
+$port = (int) getenv("MYSQLPORT");
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+    $pdo = new PDO("mysql:host=$host;port=$port;dbname=$db;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $stmt = $pdo->prepare("SELECT setting_value FROM enflow_settings WHERE setting_key = 'launch_date'");
@@ -22,7 +23,7 @@ try {
     }
 
     $launchDate = new DateTime($row['setting_value'], new DateTimeZone("Africa/Lagos"));
-    $now        = new DateTime("now",                 new DateTimeZone("Africa/Lagos"));
+    $now        = new DateTime("now", new DateTimeZone("Africa/Lagos"));
     $diff       = $launchDate->getTimestamp() - $now->getTimestamp();
 
     if ($diff < 0) $diff = 0;
