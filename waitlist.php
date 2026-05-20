@@ -62,7 +62,7 @@ if ($stmt->execute()) {
 📞 *Phone:* {$input['phone']}
 📧 *Email:* {$input['email']}
 📊 *Monthly Volume:* {$input['volume']}
-⚡ *Ready in 30 days:* {$input['readyToAdopt']}
+⚡ *Ready in 14 days:* {$input['readyToAdopt']}
 💬 *Challenge:* {$input['challenge']}
     ";
 
