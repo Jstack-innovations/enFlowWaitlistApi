@@ -48,11 +48,11 @@ $stmt->bind_param(
 if ($stmt->execute()) {
 
     // ── TELEGRAM NOTIFICATION ──
-   $botToken = getenv("TELEGRAM_BOT_TOKEN");
-   $chatId   = getenv("TELEGRAM_CHAT_ID");
+   //$botToken = getenv("TELEGRAM_BOT_TOKEN");
+   //$chatId   = getenv("TELEGRAM_CHAT_ID");
         // ── TELEGRAM NOTIFICATION ──
-  // $botToken = "8929516825:AAGw1XNyT3U4H_RNHI21depIh4wrrYAQk00";
-//$chatId   = "1843218039";
+   $botToken = "8929516825:AAGw1XNyT3U4H_RNHI21depIh4wrrYAQk00";
+$chatId   = "1843218039";
 
 
     $message = "
