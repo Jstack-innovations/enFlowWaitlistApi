@@ -1,8 +1,7 @@
 FROM php:8.2-apache
 
 # Install mysqli extension
-RUN docker-php-ext-install mysqli
-
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 # Copy all API files into the container
 COPY . /var/www/html/
 
