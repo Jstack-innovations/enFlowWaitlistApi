@@ -1,11 +1,15 @@
-FROM php:8.2-fpm-alpine
+FROM php:8.2-apache
 
-RUN apk add --no-cache nginx && \
-    docker-php-ext-install mysqli pdo pdo_mysql
+# Railway fix
+RUN a2dismod mpm_event 2>/dev/null || true
 
+# Install mysqli extension
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Copy all API files into the container
 COPY . /var/www/html/
-COPY nginx.conf /etc/nginx/nginx.conf
+
+# Allow .htaccess
+RUN a2enmod rewrite
 
 EXPOSE 80
-
-CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
