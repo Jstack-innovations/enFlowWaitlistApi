@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-require_once 'sendEmail.php'; // adjust path if needed
+require_once 'resendMail.php'; // adjust path if needed
 
 $input = json_decode(file_get_contents("php://input"), true);
 
