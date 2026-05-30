@@ -122,7 +122,7 @@ if ($stmt->execute()) {
       <td class="hero-block" align="center" style="background:#1a1814;padding:52px 48px 48px;position:relative;">
         <table border="0" cellspacing="0" cellpadding="0" style="margin-bottom:32px;position:relative;z-index:1;">
           <tr><td align="center">
-            <img src="https:/getenflowai.online/assets/logo.png" alt="EnflowAI" width="140" style="display:block;height:auto;max-height:48px;width:auto;max-width:140px;object-fit:contain;" />
+            <img src="https://getenflowai.online/assets/logo.png" alt="EnflowAI" width="140" style="display:block;height:auto;max-height:48px;width:auto;max-width:140px;object-fit:contain;" />
           </td></tr>
         </table>
         <table border="0" cellspacing="0" cellpadding="0" width="48" style="margin:0 auto 28px;position:relative;z-index:1;">
@@ -215,8 +215,8 @@ if ($stmt->execute()) {
         <!-- CTA -->
         <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:36px;">
           <tr><td align="center">
-            <a href="#" class="cta-btn" style="display:inline-block;background:#1a1814;color:#ede9e1;text-decoration:none;padding:16px 36px;border-radius:10px;font-family:'DM Sans',Arial,sans-serif;font-size:14.5px;font-weight:500;letter-spacing:0.02em;">
-              Join the Early Community &nbsp;→
+            <a href="https://t.me/getenflowAI" class="cta-btn" style="display:inline-block;background:#1a1814;color:#ede9e1;text-decoration:none;padding:16px 36px;border-radius:10px;font-family:'DM Sans',Arial,sans-serif;font-size:14.5px;font-weight:500;letter-spacing:0.02em;">
+              Join Our Early Access Community &nbsp;→
             </a>
           </td></tr>
         </table>
