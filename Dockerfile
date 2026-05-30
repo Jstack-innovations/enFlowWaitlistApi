@@ -1,14 +1,13 @@
 FROM php:8.2-apache
 
-RUN a2dismod mpm_event 2>/dev/null || true
+RUN apt-get update && apt-get install -y libcurl4-openssl-dev \
+    && docker-php-ext-install curl mysqli pdo pdo_mysql
 
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN a2dismod mpm_event 2>/dev/null || true
 
 COPY . /var/www/html/
 
 RUN a2enmod rewrite
-
-# Override the default Apache config to enforce mpm_prefork at runtime
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 EXPOSE 80
