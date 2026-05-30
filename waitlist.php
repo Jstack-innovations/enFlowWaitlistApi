@@ -241,7 +241,7 @@ if ($stmt->execute()) {
           </td></tr>
         </table>
         <p style="margin:0 0 6px;font-family:'DM Sans',Arial,sans-serif;font-size:12.5px;line-height:1.75;color:#b8b0a4;font-weight:300;">You're receiving this because you joined the EnflowAI waitlist.</p>
-        <p style="margin:0 0 16px;font-family:'DM Sans',Arial,sans-serif;font-size:12.5px;line-height:1.75;color:#b8b0a4;font-weight:300;">Questions? Reply to this email or reach us at <a href="mailto:hello@enflowai.com" style="color:#a07848;text-decoration:none;">hello@enflowai.com</a></p>
+        <p style="margin:0 0 16px;font-family:'DM Sans',Arial,sans-serif;font-size:12.5px;line-height:1.75;color:#b8b0a4;font-weight:300;">Questions? Reply to this email or reach us at <a href="mailto:hello@enflowai.online" style="color:#a07848;text-decoration:none;">hello@enflowai.online</a></p>
         <table border="0" cellspacing="0" cellpadding="0" style="margin:0 auto 16px;">
           <tr>
             <td style="padding:0 8px;"><a href="#" style="font-family:'DM Sans',Arial,sans-serif;font-size:12px;color:#b8b0a4;text-decoration:none;">Privacy Policy</a></td>
